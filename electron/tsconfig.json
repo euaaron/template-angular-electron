@@ -1,0 +1,11 @@
+{
+  "include": ["*"],
+  "compilerOptions": {
+    "strict": true,
+    "sourceMap": true,
+    "importHelpers": true,
+    "removeComments": true,
+    "forceConsistentCasingInFileNames": true,
+    "outDir": "../dist/electron",
+  }
+}
