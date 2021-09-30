@@ -1,5 +1,6 @@
 {
   "name": "ngx-electro-bro",
+  "productName": "Electro Bro - Angular",
   "description": "A simple multi-platform web browser made with Electron + Angular Ivy",
   "homepage": "https://github.com/euaaron/angular-browser",
   "version": "0.0.0",
@@ -13,14 +14,16 @@
     "ng": "ng",
     "watch": "tsc -w",
     "electron:build": "tsc --build electron",
-    "start:electron": "yarn electron:build && electron .",
     "build": "ng build && yarn electron:build ",
     "build:prod": "ng build --configuration=production && yarn electron:build ",
-    "start:prod": "yarn build:prod && yarn start:electron",
-    "start": "concurrently 'ng serve' 'yarn watch' 'yarn electron .'",
+    "start": "electron .",
+    "start:ng": "ng serve",
+    "start:dev": "concurrently 'ng serve' 'yarn watch' 'yarn start'",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "pack:all": "yarn build:prod && npx electron-packager --out='packages' --all .",
+    "pack:win": "yarn build:prod && npx electron-packager --out='packages' --platform=win32 --arch=x64 --dir=dist ."
   },
   "private": true,
   "dependencies": {
@@ -51,10 +54,8 @@
     "@typescript-eslint/eslint-plugin": "4.16.1",
     "@typescript-eslint/parser": "4.16.1",
     "concurrently": "^6.2.2",
-    "dotenv": "^10.0.0",
     "electron": "^15.0.0",
     "electron-packager": "^15.4.0",
-    "electron-reload": "^2.0.0-alpha.1",
     "eslint": "^7.6.0",
     "jasmine-core": "~3.6.0",
     "jasmine-spec-reporter": "~5.0.0",
@@ -67,5 +68,8 @@
     "ts-node": "~8.3.0",
     "ts-node-dev": "^1.1.8",
     "typescript": "~4.1.5"
+  },
+  "optionalDependencies": {
+    "husky": "^7.0.2"
   }
 }

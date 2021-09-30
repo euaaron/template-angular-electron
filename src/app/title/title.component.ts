@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { TabService } from './tab/service/tab.service';
 
 @Component({
@@ -6,7 +6,7 @@ import { TabService } from './tab/service/tab.service';
   templateUrl: './title.component.html',
   styleUrls: ['./title.component.scss']
 })
-export class TitleComponent implements OnInit {
+export class TitleComponent {
   public toggleMaximize = {
     Title: "Maximize",
     Icon: "chevron-up"
@@ -16,10 +16,6 @@ export class TitleComponent implements OnInit {
 
   public test() {
     console.log('Passing Functions Works!!');
-  }
-
-  ngOnInit(): void {
-
   }
 
   runToggleMaximize() {
