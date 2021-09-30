@@ -4,7 +4,7 @@
   "description": "A simple multi-platform web browser made with Electron + Angular Ivy",
   "homepage": "https://github.com/euaaron/angular-browser",
   "version": "0.0.0",
-  "main": "./dist/electron/electron.js",
+  "main": "./packages/build/dist/electron/electron.js",
   "author": {
     "name": "Aaron Carneiro",
     "email": "hello@aaroncarneiro.com",
