@@ -1,0 +1,28 @@
+#address-bar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: #21222C;
+
+  padding: 0 2rem;
+  margin: .2rem;
+  border-radius: 50rem;
+
+  -webkit-app-region: no-drag;
+
+  > input {
+    height: 1.2rem;
+    width: 50vw;
+    border: none;
+    background-color: #21222C;
+
+    font-size: 1.2rem;
+    color: whitesmoke;
+
+    outline-color: transparent;
+    outline: none;
+    border: none;
+  }
+
+}

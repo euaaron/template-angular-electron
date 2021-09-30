@@ -1,0 +1,18 @@
+.action-button {
+  display: inline-flex;
+  align-items: center;
+  gap: .2rem;
+
+  color: darken(white, $amount: 50);
+
+  :hover {
+    color: white;
+  }
+}
+
+.red-hover {
+  :hover, > *:hover {
+    color: rgb(235, 122, 122);
+  }
+}
+

@@ -6,6 +6,6 @@
     "importHelpers": true,
     "removeComments": true,
     "forceConsistentCasingInFileNames": true,
-    "outDir": "../dist/electron",
+    "outDir": "../dist/"
   }
 }

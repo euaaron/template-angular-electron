@@ -26,9 +26,22 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 Also check [Electron Documentation](https://www.electronjs.org/docs/latest/) if you don't know it yet.
 
+## How To
+
+### Develop with Live Reload
+
+- easy way:
+  1. run `ng serve`.
+  2. access `localhost:4200` inside any browser.
+- alternative way:
+  1. Certify that `environment.production` is set to `false`
+  2. Run `ng serve`.
+  3. Open another terminal and run `tsc -w`.
+  4. Finally, open on more terminal and run `yarn start:electron`.
+
 ## TO DO
 
-- [ ] add live reload capabilities to dev environment
+- [x] add live reload capabilities to dev environment
 - [ ] create a fallbacks to http and to a search engine when an address is tried to be accessed
 - [ ] create a configuration tab where user can choose:
   - [ ] the default search engine,

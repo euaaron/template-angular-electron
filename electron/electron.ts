@@ -1,22 +1,19 @@
 import * as dotenv from 'dotenv';
-import { app, BrowserWindow, screen } from 'electron';
-import * as fs from 'fs';
+import { app, BrowserWindow, ipcMain, screen } from 'electron';
+import 'electron-reload';
 import * as path from 'path';
 import * as url from 'url';
+import { environment } from '../src/environments/environment';
 
 dotenv.config();
 
 let win: BrowserWindow;
+const ipc = ipcMain;
 
 function createWindow() {
   const electronScreen = screen;
   const size = electronScreen.getPrimaryDisplay().workAreaSize;
-  let pathIndex = "./index.html";
-
-  if (fs.existsSync(path.join(__dirname, "../index.html"))) {
-    // Path when running electron in local folder
-    pathIndex = "../index.html";
-  }
+  let pathIndex = "../index.html";
 
   // Create the browser window.
   win = new BrowserWindow({
@@ -27,7 +24,10 @@ function createWindow() {
     minWidth: size.width * 0.25,
     minHeight: size.height * 0.25,
     frame: false,
+    transparent: true,
+    roundedCorners: true,
     webPreferences: {
+      webviewTag: true,
       nodeIntegration: true,
       allowRunningInsecureContent: false,
       webSecurity: true,
@@ -35,19 +35,33 @@ function createWindow() {
     },
   });
 
-  win.loadURL(
-    url.format({
-      pathname: path.join(__dirname, pathIndex),
-      protocol: "file:",
-      slashes: true,
-    })
-  );
-
-  const isRunningInDevMode = Boolean(process.env.DEV) || false;
-
-  if (isRunningInDevMode) {
-    win.webContents.openDevTools();
+  if(!environment.production) {
+    win.loadURL('http://localhost:4200');
+  } else {
+    win.loadURL(
+      url.format({
+        pathname: path.join(__dirname, pathIndex),
+        protocol: "file:",
+        slashes: true,
+      })
+    );
   }
+
+  ipc.on('close', () => {
+    win.close();
+  });
+
+  ipc.on('minimize', () => {
+    win.minimize();
+  });
+
+  ipc.on('maximize', () => {
+    win.maximize();
+  });
+
+  ipc.on('restore', () => {
+    win.restore();
+  });
 
   // Event when the window is closed.
   win.on("closed", function () {

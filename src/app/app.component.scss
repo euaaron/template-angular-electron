@@ -1,0 +1,11 @@
+#app {
+  display: flex;
+  flex-direction: column;
+  background-color: #282a36;
+  width: 100vw;
+  height: 100vh;
+
+  overflow: hidden;
+  border-radius: 0.8rem;
+  border: solid 1px black;
+}

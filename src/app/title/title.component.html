@@ -1,0 +1,23 @@
+<div id="title">
+  <section>
+    <app-address-bar *ngIf="tabs.count() === 0"></app-address-bar>
+    <div *ngIf="tabs.count()" id="tabs">
+
+    </div>
+  </section>
+  <aside>
+    <app-action-button
+      icon="minus"
+      title="Minimize"
+    ></app-action-button>
+    <app-action-button
+      [icon]="toggleMaximize.Icon"
+      [title]="toggleMaximize.Title"
+      (click)="runToggleMaximize()"
+    ></app-action-button>
+    <app-action-button
+      icon="x"
+      title="Close"
+    ></app-action-button>
+  </aside>
+</div>
