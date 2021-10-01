@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { ActionService } from './services/action.service';
 
 @Component({
@@ -6,18 +6,11 @@ import { ActionService } from './services/action.service';
   templateUrl: './action-button.component.html',
   styleUrls: ['./action-button.component.scss']
 })
-export class ActionButtonComponent implements OnInit {
-  public classes = 'action-button';
+export class ActionButtonComponent {
   @Input() public icon? = '';
   @Input() public title: string;
 
   constructor(private action: ActionService) { }
-
-  ngOnInit(): void {
-    if(this.title === "Close") {
-      this.classes += ' red-hover';
-    }
-  }
 
   onClick() {
     this.action.run(this.title.toLowerCase());

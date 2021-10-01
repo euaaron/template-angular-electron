@@ -1,18 +1,15 @@
-.action-button {
-  display: inline-flex;
+button {
+  flex: 1;
+  display: flex;
   align-items: center;
-  gap: .2rem;
+  justify-content: center;
 
-  color: darken(white, $amount: 50);
+  padding: 0 .5rem;
 
-  :hover {
-    color: white;
-  }
+  color: #3a3d4e;
 }
 
-.red-hover {
-  :hover, > *:hover {
-    color: rgb(235, 122, 122);
-  }
+button:hover,
+button:hover * {
+  color: var(--altForeground);
 }
-
