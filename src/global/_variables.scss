@@ -1,0 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Source+Sans+Pro&display=swap");
+
+:root {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  line-height: 2rem;
+  --defaultBackground: #282a36;
+  --defaultForeground: #6272a4;
+  --altForeground: #f8f8f2;
+  --titleBackground: #14141b;
+  --titleForeground: #3a3d4e;
+  --altTitleForeground: #31bbff;
+  --menuBackground: #1d1f28;
+  --menuForeground: #6272a4;
+  --altMenuForeground: #bd93f9;
+  --highlightBackground: #44475a;
+  --highlightForeground: #31bbff;
+  --warningBackground: #ff6e6e;
+  --warningForeground: #f8f8f2;
+  --successBackground: #69ff94;
+  --successForeground: #3a3d4e;
+  --outBorder: #14141b;
+  --innerBorder: #21222c;
+}
