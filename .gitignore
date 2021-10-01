@@ -1,8 +1,7 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
 # compiled output
-packages/*
-/dist
+/packages/*
 /tmp
 /out-tsc
 # Only exists if Bazel was run
@@ -48,4 +47,4 @@ testem.log
 Thumbs.db
 
 # Keep
-!packages/build/package.json
+!packages/dist/package.json

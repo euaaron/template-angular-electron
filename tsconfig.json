@@ -3,7 +3,7 @@
   "compileOnSave": true,
   "compilerOptions": {
     "baseUrl": "./",
-    "outDir": "./dist/",
+    "outDir": "./packages/dist/build",
     "sourceMap": true,
     "declaration": false,
     "downlevelIteration": true,

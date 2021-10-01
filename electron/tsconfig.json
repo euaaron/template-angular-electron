@@ -6,6 +6,6 @@
     "importHelpers": true,
     "removeComments": true,
     "forceConsistentCasingInFileNames": true,
-    "outDir": "../dist/"
+    "outDir": "../packages/dist/build"
   }
 }
