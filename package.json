@@ -13,18 +13,18 @@
   "scripts": {
     "ng": "ng",
     "watch": "tsc -w",
-    "build:web": "ng build --prod",
-    "build:app": "tsc --build electron",
-    "build": "yarn build:web && yarn build:app",
-    "start:web": "ng serve",
-    "start:app": "electron ./packages/dist",
-    "start": "concurrently 'yarn start:web' 'yarn watch' 'yarn start:app'",
+    "build-web": "ng build --prod",
+    "build-app": "tsc --build electron",
+    "build": "yarn build-web && yarn build-app",
+    "start-web": "ng serve",
+    "start-app": "yarn build-app && electron ./packages/dist",
+    "start": "yarn start-web && concurrently \"yarn watch\" \"yarn start-app\"",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "pack": "yarn build:prod && npx electron-packager --out='packages' --all ./packages/dist",
-    "pack:win": "npx electron-packager --out='packages' --platform=win32 --arch=x64 ./packages/dist",
-    "pack:linux": "npx electron-packager --out='packages' --platform=linux --arch=x64 ./packages/dist"
+    "pack": "yarn build-prod && npx electron-packager --out='packages' --all ./packages/dist",
+    "pack-win": "npx electron-packager --out='packages' --platform=win32 --arch=x64 ./packages/dist",
+    "pack-linux": "npx electron-packager --out='packages' --platform=linux --arch=x64 ./packages/dist"
   },
   "private": true,
   "dependencies": {
