@@ -18,7 +18,7 @@
     "build": "yarn build-web && yarn build-app",
     "start-web": "ng serve",
     "start-app": "yarn build-app && electron ./dist/build/electron/electron.js",
-    "start": "yarn start-web && concurrently \"yarn watch\" \"yarn start-app\"",
+    "start": "concurrently \"yarn start-web\" \"yarn watch\" \"yarn start-app\"",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
