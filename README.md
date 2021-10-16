@@ -1,4 +1,4 @@
-# NgxElectroBro
+# Angular Electron
 
 A simple multi-platform web browser made with Electron + Angular Ivy
 
