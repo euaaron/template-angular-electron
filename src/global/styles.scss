@@ -13,13 +13,14 @@ h6 {
 }
 
 body {
-  background: transparent;
+  color: var(--altForeground);
+  background: var(--defaultBackground);
 }
 
 button {
   border: none;
   margin: 0;
-  padding: .1rem;
+  padding: 0.1rem;
   font-size: 1rem;
   line-height: 2rem;
   background-color: transparent;
@@ -27,7 +28,11 @@ button {
   -webkit-app-region: no-drag;
 }
 
-.close:hover {
-  background-color: var(--warningBackground);
-  color: var(--altForeground) !important;
+a {
+  color: var(--defaultForeground);
+  transition: .6s;
+
+  &:hover {
+    color: var(--highlightForeground);
+  }
 }

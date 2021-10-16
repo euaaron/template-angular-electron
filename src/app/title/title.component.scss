@@ -1,4 +1,5 @@
 #title {
+  position: fixed;
   display: flex;
   flex-direction: row;
   align-content: center;
@@ -30,13 +31,18 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
+  &:hover {
+    background-color: var(--highlightBackground);
+  }
+
+  &.close:hover {
+    background-color: var(--warningBackground);
+    color: var(--altForeground);
+  }
 }
 
-.action-button:hover {
-  background-color: var(--highlightBackground);
-}
-
-.action-button.close:hover {
+.close:hover {
   background-color: var(--warningBackground);
-  color: var(--defaultForeground);
+  color: var(--altForeground);
 }
