@@ -40,11 +40,10 @@ testem.log
 Thumbs.db
 
 # compiled output
-packages/*
 /tmp
 /out-tsc
 # Only exists if Bazel was run
 /bazel-out
 
-# Keep
-!packages/dist/package.json
+/dist/packages/*
+/dist/build/*
