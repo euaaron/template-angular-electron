@@ -1,9 +1,9 @@
 {
-  "name": "ngx-electro-bro",
-  "productName": "Electro Bro - Angular",
-  "description": "A simple multi-platform web browser made with Electron + Angular Ivy",
-  "homepage": "https://github.com/euaaron/angular-browser",
-  "version": "0.0.0",
+  "name": "ng-electron",
+  "productName": "Angular Electron Template",
+  "description": "A simple multi-platform template application of Electron + Angular Ivy",
+  "homepage": "https://github.com/euaaron/angular-electron",
+  "version": "1.0.0",
   "main": "./packages/dist/build/electron/electron.js",
   "author": {
     "name": "Aaron Carneiro",
@@ -17,7 +17,7 @@
     "build-app": "tsc --build electron",
     "build": "yarn build-web && yarn build-app",
     "start-web": "ng serve",
-    "start-app": "yarn build-app && electron ./packages/dist",
+    "start-app": "yarn build-app && electron ./packages/dist/build/electron/electron.js",
     "start": "yarn start-web && concurrently \"yarn watch\" \"yarn start-app\"",
     "test": "ng test",
     "lint": "ng lint",

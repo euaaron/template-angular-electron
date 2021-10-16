@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "ngx-electro-bro": {
+    "ng-electron": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -67,18 +67,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "ngx-electro-bro:build"
+            "browserTarget": "ng-electron:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "ngx-electro-bro:build:production"
+              "browserTarget": "ng-electron:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "ngx-electro-bro:build"
+            "browserTarget": "ng-electron:build"
           }
         },
         "test": {
@@ -111,18 +111,18 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "ngx-electro-bro:serve"
+            "devServerTarget": "ng-electron:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "ngx-electro-bro:serve:production"
+              "devServerTarget": "ng-electron:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "ngx-electro-bro",
+  "defaultProject": "ng-electron",
   "cli": {
     "defaultCollection": "@angular-eslint/schematics"
   }
