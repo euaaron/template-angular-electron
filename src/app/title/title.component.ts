@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { TabService } from './tab/service/tab.service';
 
 @Component({
   selector: 'app-title',
@@ -11,8 +10,6 @@ export class TitleComponent {
     Title: "Maximize",
     Icon: "chevron-up"
   }
-
-  constructor(public tabs: TabService) { }
 
   public test() {
     console.log('Passing Functions Works!!');
