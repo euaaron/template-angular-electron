@@ -1,8 +1,8 @@
-`electron` &nbsp; `typescript` &nbsp; `angular` &nbsp; `nodejs` &nbsp; `windows` &nbsp; `desktop` &nbsp; `web` &nbsp; `multi-platform`
+`electron` &nbsp; `typescript` &nbsp; `angular` &nbsp; `nodejs` &nbsp; `windows` &nbsp; `linux`  &nbsp; `desktop` &nbsp; `web` &nbsp; `multi-platform`
 
 ![header](https://raw.githubusercontent.com/euaaron/template-angular-electron/main/docs/README-header.jpg?token=AGJCZYW5RXEENQUF6GMPYIDBOR3UE)
 
-A simple multi-platform Electron template made to work Angular Ivy
+A simple multi-platform Electron template made to work with Angular Ivy.
 
 ## About
 
