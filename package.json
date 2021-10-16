@@ -4,7 +4,7 @@
   "description": "A simple multi-platform template application of Electron + Angular Ivy",
   "homepage": "https://github.com/euaaron/template-angular-electron",
   "version": "1.0.0",
-  "main": "./packages/dist/build/electron/electron.js",
+  "main": "./dist/build/electron/electron.js",
   "author": {
     "name": "Aaron Carneiro",
     "email": "hello@aaroncarneiro.com",
@@ -17,14 +17,14 @@
     "build-app": "tsc --build electron",
     "build": "yarn build-web && yarn build-app",
     "start-web": "ng serve",
-    "start-app": "yarn build-app && electron ./packages/dist/build/electron/electron.js",
+    "start-app": "yarn build-app && electron ./dist/build/electron/electron.js",
     "start": "yarn start-web && concurrently \"yarn watch\" \"yarn start-app\"",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "pack": "yarn build-prod && npx electron-packager --out='packages' --all ./packages/dist",
-    "pack-win": "npx electron-packager --out='packages' --platform=win32 --arch=x64 ./packages/dist",
-    "pack-linux": "npx electron-packager --out='packages' --platform=linux --arch=x64 ./packages/dist"
+    "pack": "yarn build-prod && npx electron-packager --out='dist/packages' --all ./dist",
+    "pack-win": "npx electron-packager --out='dist/packages' --platform=win32 --arch=x64 ./dist",
+    "pack-linux": "npx electron-packager --out='dist/packages' --platform=linux --arch=x64 ./dist"
   },
   "private": true,
   "dependencies": {
