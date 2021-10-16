@@ -3,17 +3,14 @@ import { NgModule } from '@angular/core';
 import { FeatherModule } from 'angular-feather';
 import {
   ChevronDown,
-  ChevronUp,
-  Github,
-  Minus,
-  X
+  ChevronUp, Link2, Minus, X
 } from 'angular-feather/icons';
 
 const icons = {
-  Github,
   ChevronUp,
   ChevronDown,
   Minus,
+  Link2,
   X,
 };
 
