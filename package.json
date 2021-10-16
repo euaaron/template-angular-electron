@@ -2,7 +2,7 @@
   "name": "ng-electron",
   "productName": "Angular Electron Template",
   "description": "A simple multi-platform template application of Electron + Angular Ivy",
-  "homepage": "https://github.com/euaaron/angular-electron",
+  "homepage": "https://github.com/euaaron/template-angular-electron",
   "version": "1.0.0",
   "main": "./packages/dist/build/electron/electron.js",
   "author": {
