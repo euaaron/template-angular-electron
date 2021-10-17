@@ -37,6 +37,8 @@ Also check [Electron Documentation](https://www.electronjs.org/docs/latest/) if 
 
 ## How To Get Started
 
+**This project uses NodeJs, so you need it to start.**
+
 1. Create a new repository on GitHub [using this as a template](https://github.com/euaaron/template-angular-electron/generate);
 2. Open your new repository and clone it or open at GitHub Codespaces;
 3. Open the folder on VS Code or a terminal and run `npm install` or `yarn` to download and install the project dependencies;
@@ -44,7 +46,7 @@ Also check [Electron Documentation](https://www.electronjs.org/docs/latest/) if 
 
 > Tip: You can generate components, modules, services and everything from Angular normally.
 
-**This project uses NodeJs, so you need it to start.**
+> Warning! Do not remove `dist/package.json`.
 
 ## How to Code with Live Reload
 
