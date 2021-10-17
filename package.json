@@ -4,7 +4,7 @@
   "description": "A simple multi-platform template application of Electron + Angular Ivy",
   "homepage": "https://github.com/euaaron/template-angular-electron",
   "version": "1.0.0",
-  "main": "./dist/build/electron/electron.js",
+  "main": "./dist/build/electron/main.js",
   "author": {
     "name": "Aaron Carneiro",
     "email": "hello@aaroncarneiro.com",
