@@ -17,7 +17,7 @@
     "build-app": "tsc --build electron",
     "build": "yarn build-web && yarn build-app",
     "start-web": "ng serve",
-    "start-app": "yarn build-app && electron ./dist/build/electron/electron.js",
+    "start-app": "yarn build-app && electron ./dist/build/electron/main.js",
     "start": "concurrently \"yarn start-web\" \"yarn watch\" \"yarn start-app\"",
     "test": "ng test",
     "lint": "ng lint",
